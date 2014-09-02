@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap core CSS -->
+    <!-- Custom styles for this template -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="/static/bootstrap-3.1.1-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/main.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>Cleaning By Jen</title>
+</head>
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="chevron">
+      <a href="/"><img class='logo-nav' src="/static/img/logo_small.png"></a>
+      </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+      <div class="chevron">
+      </div>
+    </div>
+    
+    {% block carousel %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+    <div class="container">
+	    <div class="footer">
+	        <p>&copy; Cleaning By Jen 2014</p>
+	    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="static/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

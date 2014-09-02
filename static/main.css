@@ -1,0 +1,183 @@
+/*Navbar Color*/
+.navbar-default {
+    background-color: #8FDCF5;
+}
+/*Navbar Menu*/
+.navbar-default .navbar-nav > li > a {
+    color: #FFF;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #ecdbff;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ecdbff;
+    
+}
+
+
+body{
+    background-color:#F79ECA;
+    color: #FFF;
+    padding-top: 120px;  
+}
+
+.headline{
+    font-family: 'Handlee', cursive;
+    color:#39B3D7;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-inner .item {
+  width:100%;
+  height: 400px;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 414px;
+  max-width: none;
+}
+.slide1{
+	background: url('/static/img/logo_400.png') no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/* More Navbar stuff */
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #ecdbff;
+    background-color: #81DAF5;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #ecdbff;
+    background-color: #81DAF5;
+}
+.navbar-default .navbar-toggle {
+    border-color: #81DAF5;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #81DAF5;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+    color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+    color: #ecdbff;
+}
+/* info button*/
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info {
+color: #fff;
+}
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.chevron {
+	background: url('/static/img/chevron_smtnn.png') repeat;
+    border-color: #89D5ED;
+    height: 35px;
+}
+
+.logo-nav{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.custom-panel-table{
+	color: #39B3D7;
+}
+
+.custom-panel-heading{
+	padding: 10px 15px;
+	border-bottom: 1px solid transparent;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-color: #BBBDBF;
+	color: #FFF;
+	background-color: #8FDCF5;
+}
+
+.custom-panel-title{
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 24px;
+	color: inherit;
+}
+.custom-panel-body{
+    padding: 15px;
+    display: block;
+    color: #BBBDBF;
+    color: #000;
+}
+.custom-footer{
+	color: #000;
+}
+
+.custom-faq{
+    font-family: 'Handlee', cursive;
+    color:#39B3D7;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+}
+.navbar-nav{
+    float:left;
+    margin-right: 150px;
+    padding-right:250px;
+}
+/*mobile*/
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
