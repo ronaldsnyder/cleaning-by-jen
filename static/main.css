@@ -16,14 +16,14 @@
 
 
 body{
-    background-color:#F79ECA;
+    background-color:#ABADAF;
     color: #FFF;
     padding-top: 120px;  
 }
 
 .headline{
     font-family: 'Handlee', cursive;
-    color:#39B3D7;
+    color:#FFF;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -33,9 +33,9 @@ body{
   z-index: 10;
 }
 
-/* Declare heights because of positioning of img element */
-.carousel-inner .item {
-  width:100%;
+/* Declare heights because of positioning of img element 
+.carousel-inner .item{
+  width:auto;
   height: 400px;
 }
 .carousel-inner > .item > img {
@@ -43,9 +43,9 @@ body{
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 414px;
+  height: auto;
   max-width: none;
-}
+}*/
 .slide1{
 	background: url('/static/img/logo_400.png') no-repeat center center fixed;
 	-webkit-background-size: cover;
