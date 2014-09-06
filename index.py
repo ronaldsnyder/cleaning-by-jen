@@ -45,15 +45,32 @@ class ContactPage(webapp2.RequestHandler):
         template = jinja_environment.get_template('contact.html')
         self.response.out.write(template.render(template_values))
     
-    def post(self, myname = None, myphone = None, myemail = None, comments = None):
-        message = mail.EmailMessage()
-        message.sender = "ronalddsnyder@gmail.com"
-        message.subject = "Cleaning By Jen Inquiry"
-        message.to = "ronalddsnyder@gmail.com"
-        message.body = "This is a pain in the rear"
-        message.send()
+    def post(self):
+        
+        myname = self.request.get('myname')
+        myphone = self.request.get("myphone")
+        myemail = self.request.get("myemail")
+        comments = self.request.get("comments")
+
+        mail.send_mail(sender="ronalddsnyder@gmail.com",
+                      #to="Jcarpenter481@hotmail.com",
+                      to="ronalddsnyder@gmail.com",
+                      subject="Cleaning By Jen Inquiry",
+                      body="""You have a new inquiry from cleaningbyjen.com.
+        Name: %s
+        Phone: %s
+        Email: %s
+        Comment:  %s
+                      
+        
+        """ % (myname, myphone, myemail, comments))
+        
         template_values = {
             'path': jinja_environment,
+            'myname': myname,
+            'myphone': myphone,
+            'myemail': myemail,
+            'comments': comments,
         }
         template = jinja_environment.get_template('success.html')
         self.response.out.write(template.render(template_values))
