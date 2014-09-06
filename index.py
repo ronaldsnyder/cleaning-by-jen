@@ -3,6 +3,8 @@ import cgi
 import os
 import jinja2
 import re
+from google.appengine.api import mail
+import logging
 
 jinja_environment = jinja2.Environment(autoescape = True,
     loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__), 'templates')))
@@ -41,6 +43,19 @@ class ContactPage(webapp2.RequestHandler):
             'path': jinja_environment
         }
         template = jinja_environment.get_template('contact.html')
+        self.response.out.write(template.render(template_values))
+    
+    def post(self, myname = None, myphone = None, myemail = None, comments = None):
+        message = mail.EmailMessage()
+        message.sender = "ronalddsnyder@gmail.com"
+        message.subject = "Cleaning By Jen Inquiry"
+        message.to = "ronalddsnyder@gmail.com"
+        message.body = "This is a pain in the rear"
+        message.send()
+        template_values = {
+            'path': jinja_environment,
+        }
+        template = jinja_environment.get_template('success.html')
         self.response.out.write(template.render(template_values))
         
 application = webapp2.WSGIApplication([
